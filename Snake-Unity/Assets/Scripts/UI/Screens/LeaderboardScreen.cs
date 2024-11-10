@@ -9,26 +9,28 @@ namespace UI.Screens
 {
     public class LeaderboardScreen : GameScreen
     {
-        [SerializeField] private VisualTreeAsset _leaderItemTreeAsset;
-        [SerializeField] private int _maxCountOfLeaders = 6;
-        
-        //private VisualElement _leaderboardContainer;
+        //[SerializeField] private VisualTreeAsset _leaderItemTreeAsset;
+        //[SerializeField] private int _maxCountOfLeaders = 6;
+
+        private VisualElement _leaderboardContainer;
         //private LeaderboardService _leaderboardService;
-        
+
         //[Inject]
-        //public void Construct(LeaderboardService leaderboardService) => 
+        //public void Construct(LeaderboardService leaderboardService) =>
         //    _leaderboardService = leaderboardService;
 
-        //protected override void Awake()
-        //{
-        //    base.Awake();
-        //    _leaderboardContainer = Screen.Q<VisualElement>("leaderboard-content");
-        //}
+        protected override void Awake()
+        {
+            base.Awake();
+            _leaderboardContainer = Screen.Q<VisualElement>("leaderboard-screen");
+        }
 
-        //private void Start() => 
-        //    _leaderboardService.Updated += OnLeaderboardUpdated;
+        private void Start() {
+            //_leaderboardService.Updated += OnLeaderboardUpdated;
+        }
+        
 
-        //private void OnDestroy() => 
+        //private void OnDestroy() =>
         //    _leaderboardService.Updated -= OnLeaderboardUpdated;
 
         //private void OnLeaderboardUpdated()

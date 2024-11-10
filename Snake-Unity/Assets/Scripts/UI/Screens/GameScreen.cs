@@ -17,12 +17,12 @@ namespace UI.Screens
 
         public virtual void Show()
         {
-            //Screen.Show();
+            Screen.Show();
         }
 
         public virtual void Hide()
         { 
-            //Screen.Hide();
+            Screen.Hide();
         } 
     }
 }

@@ -12,7 +12,7 @@ namespace UI.Screens
         private readonly Button _quitButton;
         private readonly Label _errorLabel;
 
-        private Action _onUsernameSubmit;
+
         
         public ConnectionPanel(VisualElement parent)
         {
@@ -25,6 +25,8 @@ namespace UI.Screens
         }
 
         public string Username => _usernameField.value;
+       
+        private Action _onUsernameSubmit;
         
         public event Action QuitClicked
         {
