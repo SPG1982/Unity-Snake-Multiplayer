@@ -19,7 +19,6 @@ namespace Network.Services.RoomHandlers
         public void Handle(ColyseusRoom<GameRoomState> room)
         {
             _room = room;
-            Debug.Log("111111111111");
             //_room.OnStateChange += OnStateChanged;
         }
 

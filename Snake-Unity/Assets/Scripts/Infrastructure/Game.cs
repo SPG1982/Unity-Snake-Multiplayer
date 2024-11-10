@@ -18,11 +18,11 @@ namespace Infrastructure
             _uiFactory = uiFactory;
         }
 
-        public async void Start()
+        public void Start()
         {
             _staticData.Load();
-            await this.Connect("1111");
-            //_uiFactory.CreateUIRoot();
+            //await this.Connect("namePlayer");
+            _uiFactory.CreateUIRoot();
         }
 
         public async UniTask<ConnectionResult> Connect(string username) =>

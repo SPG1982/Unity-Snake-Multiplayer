@@ -8,8 +8,7 @@ namespace Infrastructure
     {
         private readonly Container _container;
 
-        public Injector(Container container) => 
-            _container = container;
+        public Injector(Container container) => _container = container;
         public TObject Inject<TObject>(TObject obj) where TObject : Object
         {
             switch (obj)

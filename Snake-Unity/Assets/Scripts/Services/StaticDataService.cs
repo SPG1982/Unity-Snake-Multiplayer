@@ -20,14 +20,13 @@ namespace Services
         public void Load()
         {
             _connectionSettings = _assets.Load<ColyseusSettings>(ConnectionSettingPath);
+            Debug.Log(_connectionSettings);
             _snakeStaticData = _assets.Load<SnakeStaticData>(SnakeDataPath);
         }
 
-        public ColyseusSettings ForConnection() =>
-            _connectionSettings;
+        public ColyseusSettings ForConnection() => _connectionSettings;
 
-        public SnakeData ForSnake() =>
-            _snakeStaticData.Data;
+        public SnakeData ForSnake() => _snakeStaticData.Data;
 
         public Material ForSnakeSkin(int index)
         {
